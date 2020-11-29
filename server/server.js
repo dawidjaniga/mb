@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
@@ -5,10 +7,10 @@ const Pusher = require('pusher')
 Pusher.logToConsole = true
 
 const pusher = new Pusher({
-  app_id: '1114774',
-  key: '4a8b1610455198ddd8f8',
-  secret: '49e6e8a1c66e827eda7e',
-  cluster: 'eu',
+  app_id: process.env.PUSHER_APP_ID,
+  key: process.env.PUSHER_KEY,
+  secret: process.env.PUSHER_SECRET,
+  cluster: process.env.PUSHER_CLUSTER,
   useTLS: true
 })
 

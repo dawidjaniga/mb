@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 
 Pusher.logToConsole = true
 
-const pusher = new Pusher('4a8b1610455198ddd8f8', {
+const pusher = new Pusher('2d4485ab011f9c2d525b', {
   cluster: 'eu',
   authEndpoint: 'http://localhost:5000/pusher/auth'
 })
